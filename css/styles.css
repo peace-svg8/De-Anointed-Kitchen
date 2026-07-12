@@ -1577,8 +1577,8 @@ button {
 }
 
 .service-icon-box svg {
-  width: 42px;
-  height: 42px;
+  width: 28px;
+  height: 28px;
   stroke: var(--gold-light);
 }
 
@@ -1674,19 +1674,25 @@ button {
 }
 
 .services-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.services-list .service-detail-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .service-detail-card {
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 30px;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  padding: 40px;
+  padding: 28px;
   transition: all var(--transition-base);
   align-items: start;
 }
@@ -1698,29 +1704,29 @@ button {
 }
 
 .service-icon-box {
-  width: 80px;
-  height: 80px;
+  width: 56px;
+  height: 56px;
   border-radius: var(--radius-md);
   background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   flex-shrink: 0;
 }
 
 .service-detail-content h3 {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--gold-light);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .service-detail-content p {
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
 }
 
 /* ---------- GALLERY PAGE ---------- */
@@ -2093,6 +2099,14 @@ button {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+
+  .services-list .service-detail-card:last-child:nth-child(odd) {
+    max-width: 100%;
   }
 
   .service-detail-card {
