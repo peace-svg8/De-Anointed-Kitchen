@@ -231,7 +231,7 @@ button {
 }
 
 .nav-logo img {
-  height: 50px;
+  height: 80px;
   width: auto;
 }
 
@@ -389,7 +389,7 @@ button {
   height: 85%;
   object-fit: cover;
   border-radius: 40px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
   position: relative;
   z-index: 1;
 }
@@ -402,7 +402,7 @@ button {
   border-radius: 50px;
   font-weight: 700;
   font-size: 1rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   z-index: 5;
   display: flex;
   align-items: center;
@@ -413,17 +413,50 @@ button {
   white-space: nowrap;
 }
 
-.tag-1 { top: 15%; left: 0%; animation-delay: 0s; }
-.tag-2 { top: 35%; right: 0%; animation-delay: 1.2s; }
-.tag-3 { bottom: 35%; left: 5%; animation-delay: 2.4s; }
-.tag-4 { bottom: 12%; right: 10%; animation-delay: 1.5s; }
-.tag-5 { top: 8%; right: 15%; animation-delay: 2.8s; }
+.tag-1 {
+  top: 15%;
+  left: 0%;
+  animation-delay: 0s;
+}
+
+.tag-2 {
+  top: 35%;
+  right: 0%;
+  animation-delay: 1.2s;
+}
+
+.tag-3 {
+  bottom: 35%;
+  left: 5%;
+  animation-delay: 2.4s;
+}
+
+.tag-4 {
+  bottom: 12%;
+  right: 10%;
+  animation-delay: 1.5s;
+}
+
+.tag-5 {
+  top: 8%;
+  right: 15%;
+  animation-delay: 2.8s;
+}
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
+
 .hero-image-accent {
   position: absolute;
   top: 0;
@@ -650,28 +683,48 @@ button {
 }
 
 /* ---------- WHITE CARD TEXT OVERRIDES ---------- */
-.service-card-mini, .why-card, .testimonial-card, 
-.service-card, .value-card, .menu-item-card, 
-.service-detail-card, .contact-info-card, 
-.contact-form, .delivery-card {
+.service-card-mini,
+.why-card,
+.testimonial-card,
+.service-card,
+.value-card,
+.menu-item-card,
+.service-detail-card,
+.contact-info-card,
+.contact-form,
+.delivery-card {
   color: var(--brown-medium) !important;
 }
 
-.service-card-mini h3, .why-card h3, .testimonial-card h4, 
-.service-card h3, .value-card h3, .menu-item-info h3, 
-.service-detail-content h3, .contact-info-card h3, 
-.contact-form h3, .delivery-card h4 {
+.service-card-mini h3,
+.why-card h3,
+.testimonial-card h4,
+.service-card h3,
+.value-card h3,
+.menu-item-info h3,
+.service-detail-content h3,
+.contact-info-card h3,
+.contact-form h3,
+.delivery-card h4 {
   color: var(--brown-darkest) !important;
 }
 
-.service-card-mini p, .why-card p, .testimonial-card p, 
-.service-card p, .value-card p, .menu-item-info p, 
-.service-detail-content p, .contact-info-details h4,
-.contact-info-details p, .delivery-card p {
+.service-card-mini p,
+.why-card p,
+.testimonial-card p,
+.service-card p,
+.value-card p,
+.menu-item-info p,
+.service-detail-content p,
+.contact-info-details h4,
+.contact-info-details p,
+.delivery-card p {
   color: var(--brown-medium) !important;
 }
 
-.service-icon-box, .service-card .icon, .delivery-card .icon {
+.service-icon-box,
+.service-card .icon,
+.delivery-card .icon {
   color: var(--gold-dark) !important;
   background: rgba(212, 165, 74, 0.15) !important;
 }
@@ -679,12 +732,16 @@ button {
 .form-group label {
   color: var(--brown-darkest) !important;
 }
-.form-group input, .form-group textarea {
+
+.form-group input,
+.form-group textarea {
   background: #fdfbf7 !important;
   color: var(--brown-darkest) !important;
   border: 1px solid rgba(44, 24, 16, 0.2) !important;
 }
-.form-group input::placeholder, .form-group textarea::placeholder {
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
   color: var(--brown-medium) !important;
 }
 
@@ -1454,14 +1511,14 @@ button {
   overflow: hidden;
   display: block;
   text-decoration: none;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
   border: 1px solid var(--glass-border);
 }
 
 .category-banner:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
   border-color: var(--gold-light);
 }
 
@@ -1527,14 +1584,14 @@ button {
 
 /* ---------- CAKE GALLERY MODAL ---------- */
 .cake-modal {
-  display: none; 
-  position: fixed; 
-  z-index: 9999; 
+  display: none;
+  position: fixed;
+  z-index: 9999;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  background-color: rgba(0,0,0,0.85);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(8px);
 }
 
@@ -1555,7 +1612,7 @@ button {
   position: relative;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .close-modal {
@@ -1602,8 +1659,13 @@ button {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* ---------- SERVICES PAGE ---------- */
@@ -2088,7 +2150,7 @@ button {
     /* Optionally make it a horizontal scroll on mobile, or just keep 2x2 */
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .hero-image-accent {
     background: linear-gradient(to top, var(--brown-darkest) -5%, transparent 40%, transparent 100%);
   }
@@ -2204,4 +2266,6 @@ button {
   .testimonial-card {
     padding: 25px;
   }
+}
+}
 }

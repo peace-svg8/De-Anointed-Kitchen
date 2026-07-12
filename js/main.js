@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Mobile Menu Toggle ---
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
-    
+
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scroll Reveal Animation ---
     const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-    
+
     function revealElements() {
         const windowHeight = window.innerHeight;
         const elementVisible = 100;
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Testimonial Slider ---
     const testimonials = document.querySelectorAll('.testimonial-card');
     const dots = document.querySelectorAll('.testimonial-dot');
-    
+
     if (testimonials.length > 0 && dots.length > 0) {
         let currentTestimonial = 0;
         let slideInterval;
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function showTestimonial(index) {
             testimonials.forEach(t => t.classList.remove('active'));
             dots.forEach(d => d.classList.remove('active'));
-            
+
             testimonials[index].classList.add('active');
             dots[index].classList.add('active');
         }
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Menu Filter (Menu Page) ---
     const filterBtns = document.querySelectorAll('.menu-filter-btn');
     const menuItems = document.querySelectorAll('.menu-item-card');
-    
+
     if (filterBtns.length > 0 && menuItems.length > 0) {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -126,9 +126,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 filterBtns.forEach(b => b.classList.remove('active'));
                 // Add active class to clicked button
                 btn.classList.add('active');
-                
+
                 const filter = btn.getAttribute('data-filter');
-                
+
                 menuItems.forEach(item => {
                     if (filter === 'all' || item.getAttribute('data-category') === filter) {
                         item.style.display = 'block';
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxClose = document.getElementById('lightbox-close');
-    
+
     if (galleryItems.length > 0 && lightbox && lightboxImg && lightboxClose) {
         galleryItems.forEach(item => {
             item.addEventListener('click', () => {
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         lightboxClose.addEventListener('click', closeLightbox);
-        
+
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
                 closeLightbox();
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Update active nav link based on current page ---
     const currentLocation = location.pathname.split('/').pop();
     const navAnchors = document.querySelectorAll('.nav-links a');
-    
+
     navAnchors.forEach(a => {
         const href = a.getAttribute('href');
         // If we are at root or index.html, home is active
@@ -213,7 +213,7 @@ function closeCakeGallery() {
 }
 
 // Close modal if clicking outside the content box
-window.addEventListener('click', function(e) {
+window.addEventListener('click', function (e) {
     let modal = document.getElementById('cake-gallery-modal');
     if (e.target == modal) {
         closeCakeGallery();
