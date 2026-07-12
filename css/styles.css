@@ -1311,9 +1311,11 @@ button {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .about-image {
@@ -2046,16 +2048,40 @@ button {
     --section-padding: 70px 0;
   }
 
+  .hero {
+    min-height: auto;
+  }
+
   .split-hero {
     grid-template-columns: 1fr;
   }
 
   .hero-text-side {
-    padding: 140px 24px 60px;
+    padding: 140px 24px 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .split-hero .hero-title,
+  .split-hero .hero-tagline,
+  .hero-content,
+  .hero-desc {
+    text-align: center;
+  }
+
+  .trust-badge {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-image-side {
-    height: 60vh;
+    height: 50vh;
+    min-height: 400px;
+  }
+
+  .hero-single-image-wrapper {
+    padding: 20px 24px 60px;
   }
 
   .hero-grid-2x2 {
